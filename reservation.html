@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -43,48 +44,42 @@ https://templatemo.com/tm-580-woox-travel
   </div>
   <!-- ***** Preloader End ***** -->
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="deals.html">Deals</a></li>
-                        <li><a href="reservation.html" class="active">Reservation</a></li>
-                        <li><a href="reservation.html">Book Yours</a></li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+    <header class="header">
+        <a href="index.html" class="logo"><i class="fas fa-hiking"></i> NarenTours.com</a>
+        <nav class="navbar">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="deals.html">deals</a>
+            <a href="varkala-vagamon.html">Varkala-Vagamon</a>
+            <a href="reservation.html">reservation</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div> 
+            <div id="search-btn" class="fas fa-search"></div>
         </div>
+    </header>
+<!-- HTML Updated -->
+    <div class="search-form">
+        <div id="close-search" class="fas fa-times"></div>
+        <form action="">
+            <input type="search" name="" placeholder="Search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
 
-  <div class="second-page-heading">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h4>Book Your South India Tour</h4>
-          <h2>Make Your Reservation</h2>
-          <p>Plan your perfect South India adventure with Naren Tours. Choose from our carefully curated packages and let us create unforgettable memories for you.</p>
-          <div class="main-button"><a href="about.html">Discover More</a></div>
+  <section class="home" id="home">
+    <div class="wrapper">
+      <div class="box" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('images/varkala-vagamon/varkala-beach-cliffs.jpg') no-repeat;">
+        <div class="content">
+          <span>book your</span>
+          <h3>reservation</h3>
+          <p>Make your South India tour reservation with Naren Tours. Experience the best of Kerala's beauty with our expert-guided packages.</p>
+          <a href="#reservation-form" class="btn">book now</a>
         </div>
-      </div>
+      </div>  
     </div>
-  </div>
+  </section>
 
   <div class="more-info reservation-info">
     <div class="container">
@@ -123,7 +118,7 @@ https://templatemo.com/tm-580-woox-travel
           </div>
         </div>
         <div class="col-lg-12">
-          <form id="reservation-form" name="gs" method="submit" role="search" action="#">
+          <form id="reservation-form" class="reservation-form" name="gs" method="submit" role="search" action="#" onsubmit="sendReservationEmail(event)">
             <div class="row">
               <div class="col-lg-12">
                 <h4>Make Your <em>Reservation</em> Through This <em>Form</em></h4>
@@ -143,13 +138,7 @@ https://templatemo.com/tm-580-woox-travel
               <div class="col-lg-6">
                   <fieldset>
                       <label for="chooseGuests" class="form-label">Number Of Guests</label>
-                      <select name="Guests" class="form-select" aria-label="Default select example" id="chooseGuests" onChange="this.form.click()">
-                          <option selected>ex. 3 or 4 or 5</option>
-                          <option type="checkbox" name="option1" value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4+">4+</option>
-                      </select>
+                      <input type="number" name="Guests" class="form-control" placeholder="Enter number of guests" min="1" max="500" required>
                   </fieldset>
               </div>
               <div class="col-lg-6">
@@ -157,20 +146,6 @@ https://templatemo.com/tm-580-woox-travel
                     <label for="Number" class="form-label">Check In Date</label>
                     <input type="date" name="date" class="date" required>
                 </fieldset>
-              </div>
-              <div class="col-lg-12">
-                  <fieldset>
-                      <label for="chooseDestination" class="form-label">Choose Your Destination</label>
-                      <select name="Destination" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                          <option selected>ex. Kerala, Kochi</option>
-                          <option value="Kerala, Kochi">Kerala, Kochi</option>
-                          <option value="Tamil Nadu, Madurai">Tamil Nadu, Madurai</option>
-                          <option value="Karnataka, Mysore">Karnataka, Mysore</option>
-                          <option value="Pondicherry, Pondicherry">Pondicherry, Pondicherry</option>
-                          <option value="Andhra Pradesh, Hyderabad">Andhra Pradesh, Hyderabad</option>
-                          <option value="Goa, Panaji">Goa, Panaji</option>
-                      </select>
-                  </fieldset>
               </div>
               <div class="col-lg-12">                        
                   <fieldset>
@@ -207,13 +182,173 @@ https://templatemo.com/tm-580-woox-travel
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="js/script.js"></script>
 
   <script>
     $(".option").click(function(){
       $(".option").removeClass("active");
       $(this).addClass("active"); 
     });
+
+    function sendReservationEmail(event) {
+      event.preventDefault();
+      
+      // Get form data
+      const name = document.querySelector('input[name="Name"]').value;
+      const phone = document.querySelector('input[name="Number"]').value;
+      const guests = document.querySelector('input[name="Guests"]').value;
+      const date = document.querySelector('input[name="date"]').value;
+      
+      // Create catchy WhatsApp message
+      const whatsappMessage = `🎉 *NEW BOOKING REQUEST* 🎉
+
+👋 Hello Naren Tours!
+
+I'm excited to book a South India adventure with you!
+
+📋 *Booking Details:*
+👤 *Name:* ${name}
+📞 *Phone:* ${phone}
+👥 *Number of Guests:* ${guests}
+📅 *Trip Date:* ${date}
+
+🌟 I'm ready to explore the beautiful destinations of South India with Naren Tours!
+
+Please contact me to confirm my booking and discuss the amazing tour packages.
+
+Looking forward to an unforgettable experience! ✨
+
+---
+📱 Sent from Naren Tours Website`;
+
+      // Create email content as backup
+      const emailSubject = `New Booking Request - ${name}`;
+      const emailBody = `New Booking Request from Naren Tours Website:
+
+Name: ${name}
+Phone: ${phone}
+Number of Guests: ${guests}
+Trip Date: ${date}
+
+Please contact the customer for further details.
+
+Best regards,
+Naren Tours Website`;
+
+      // WhatsApp number
+      const whatsappNumber = "919787138141";
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Try WhatsApp first
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // On mobile, try WhatsApp first
+        window.open(whatsappUrl, '_blank');
+        
+        // Fallback to email after a delay
+        setTimeout(() => {
+          const emailLink = `mailto:narentourssivakasi@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+          window.location.href = emailLink;
+        }, 2000);
+      } else {
+        // On desktop, try WhatsApp Web first
+        window.open(whatsappUrl, '_blank');
+        
+        // Also provide email option
+        setTimeout(() => {
+          const emailLink = `mailto:narentourssivakasi@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+          window.location.href = emailLink;
+        }, 1000);
+      }
+      
+      // Show success message
+      alert('Your booking request is being sent! WhatsApp will open first, then email as backup.');
+    }
   </script>
+
+  <style>
+    /* Text visibility improvements for home section */
+    .home .content span {
+      color: #fff !important;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      font-weight: bold;
+    }
+    
+    .home .content h3 {
+      color: #00ff00 !important;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      font-weight: bold;
+    }
+    
+    .home .content p {
+      color: #fff !important;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+    
+    .home .content .btn {
+      background: rgba(0,255,0,0.8);
+      color: #000 !important;
+      border: 2px solid #00ff00;
+      text-shadow: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .home .content .btn:hover {
+      background: #00ff00;
+      color: #000 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    }
+
+    /* Form input styling to ensure fields are editable */
+    .reservation-form input[type="text"],
+    .reservation-form input[type="number"],
+    .reservation-form input[type="date"],
+    .reservation-form select {
+      background: #fff !important;
+      border: 2px solid #ddd !important;
+      padding: 12px 15px !important;
+      border-radius: 5px !important;
+      font-size: 16px !important;
+      color: #333 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      transition: border-color 0.3s ease !important;
+    }
+
+    .reservation-form input[type="text"]:focus,
+    .reservation-form input[type="number"]:focus,
+    .reservation-form input[type="date"]:focus,
+    .reservation-form select:focus {
+      border-color: #00ff00 !important;
+      outline: none !important;
+      box-shadow: 0 0 5px rgba(0,255,0,0.3) !important;
+    }
+
+    .reservation-form input[type="text"]:hover,
+    .reservation-form input[type="number"]:hover,
+    .reservation-form input[type="date"]:hover,
+    .reservation-form select:hover {
+      border-color: #00ff00 !important;
+    }
+
+    .reservation-form label {
+      color: #333 !important;
+      font-weight: 600 !important;
+      margin-bottom: 8px !important;
+      display: block !important;
+    }
+
+    .reservation-form fieldset {
+      margin-bottom: 20px !important;
+    }
+  </style>
 
   </body>
 
