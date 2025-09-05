@@ -1,0 +1,23 @@
+PLACEHOLDER IMAGES NEEDED
+
+Please upload the following real images to replace these placeholders:
+
+1. varkala-beach-cliffs.jpg - Main Varkala beach with red cliffs
+2. varkala-black-sand-beach.jpg - Black sand beach at Varkala  
+3. varkala-sunset.jpg - Beautiful sunset at Varkala beach
+4. varkala-cliff-beach.jpg - Cliff beach view
+5. varkala-kapil-beach.jpg - Kapil beach area
+6. vagamon-meadows.jpg - Rolling meadows of Vagamon
+7. vagamon-pine-forest.jpg - Pine forest area
+8. vagamon-hills.jpg - Scenic hill views
+9. vagamon-thangalpara.jpg - Thangalpara viewpoint
+10. vagamon-ulluponi-waterfalls.jpg - Ulluponi waterfalls
+11. vagamon-idukki-dam.jpg - Idukki Dam view
+
+Image specifications:
+- Format: JPG or PNG
+- Size: 800x600 to 1200x800 pixels
+- File size: Under 500KB each
+- High quality for web display
+
+Once uploaded, the website will automatically display your real photos!
