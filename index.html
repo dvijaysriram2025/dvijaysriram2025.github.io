@@ -21,7 +21,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo" style="font-size: 2.5rem; font-weight: 800;"><i class="fas fa-hiking"></i> NarenTours.com</a>
+        <a href="#" class="logo" style="height: 3.5rem; display: flex; align-items: center;"><img src="images/logo.png" alt="Narentours Logo" style="height: 100%; width: auto;">Naren Tours</a>
         <nav class="navbar">
             <div id="nav-close" class="fas fa-times"></div>
             <a href="#home">home</a>
@@ -467,9 +467,26 @@ Sent from Naren Tours Website`;
         
         /* Navigation menu visibility improvements */
         .header {
-            background: rgba(255, 255, 255, 0.9) !important;
+            background: rgba(255, 255, 255, 0.3) !important;
             backdrop-filter: blur(10px);
-            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            min-height: 4rem !important; /* Adjusted header height for readable logo */
+            transition: all 0.3s ease; /* Smooth transition for scroll effect */
+        }
+        
+        /* Semi-transparent header when scrolling */
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.2) !important;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header.scrolled .navbar a {
+            color: rgba(44, 62, 80, 0.8) !important;
+        }
+        
+        .header.scrolled .icons .fas {
+            color: rgba(44, 62, 80, 0.8) !important;
         }
         
         .navbar a {
@@ -566,11 +583,11 @@ Sent from Naren Tours Website`;
                 padding: 20px;
             }
         }
-        .why-choose-us {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
+            .why-choose-us {
+                padding: 80px 0;
+                background: white;
+                color: #2c3e50;
+            }
 
         .why-choose-us .container {
             max-width: 1200px;
@@ -587,13 +604,13 @@ Sent from Naren Tours Website`;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 15px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #2c3e50;
+            text-shadow: none;
         }
 
         .section-subtitle {
             font-size: 1.2rem;
-            color: rgba(255,255,255,0.9);
+            color: #666;
             margin: 0;
         }
 
@@ -642,13 +659,13 @@ Sent from Naren Tours Website`;
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
-            color: white;
+            color: #2c3e50;
         }
 
         .feature-content p {
             font-size: 1rem;
             line-height: 1.6;
-            color: rgba(255,255,255,0.9);
+            color: #666;
             margin: 0;
         }
 
@@ -684,8 +701,8 @@ Sent from Naren Tours Website`;
         "@context": "https://schema.org",
         "@type": "TravelAgency",
         "name": "Narentours",
-        "image": "https://narentours.com/logo.png",
-        "logo": "https://narentours.com/images/logo.png",
+        "image": "https://narentours.com/logo.jpg",
+        "logo": "https://narentours.com/images/logo.jpg",
         "@id": "https://narentours.com",
         "url": "https://narentours.com",
         "telephone": ["+91-9787138141", "+91-8248801071"],
@@ -763,6 +780,19 @@ Sent from Naren Tours Website`;
             "https://www.instagram.com/naren_tours_sivakasi"
         ]
     }
+    </script>
+    
+    <!-- Scroll Effect JavaScript -->
+    <script>
+        // Add scroll effect for transparent header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
